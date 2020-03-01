@@ -1,7 +1,6 @@
 import time
 import RPi.GPIO as GPIO
 
-
 #Motor A
 enableMotorA = 12
 in1 = 10
