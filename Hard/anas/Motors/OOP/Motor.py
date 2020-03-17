@@ -83,3 +83,7 @@ class Motor:
     @staticmethod
     def description():
         return "class Motor"
+GPIO.setmode(GPIO.BOARD)
+m = Motor("left",8,7,10,1,1)
+while True:
+    pass
