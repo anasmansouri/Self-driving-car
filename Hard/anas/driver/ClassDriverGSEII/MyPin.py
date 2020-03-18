@@ -1,22 +1,24 @@
-
 class MyPin:
 
-    def __init__(self, GpioNumber ,direction ,value):
+    def __init__(self, GpioNumber):
         self._GpioNumber = GpioNumber
-        self.value = value
-        self.direction = direction
+        self._direction = "anas"
+        self._value = None
 
     # direction
     @property
     def direction(self):
+        print("getter of direction")
         return self._direction
 
     @direction.setter
     def direction(self, direction):
-        self._direction = direction
+        print("on a changer la direction ")
         d = open("/sys/class/gpio/gpio{}/direction".format(self._GpioNumber), "w")
-        d.write("{}".format(self._direction))
+        d.write("{}".format(direction))
         d.close()
+        self._direction = direction
+
 
     # value
 
@@ -41,9 +43,9 @@ class MyPin:
 
     def __repr__(self):
         return "MyPin(GpioNumber : {} ,direction : {} ,value : {})".format(self._GpioNumber,
-                                                                              self.value,
-                                                                              self.direction,
-                                                                              )
+                                                                           self.value,
+                                                                           self.direction,
+                                                                           )
 
     @staticmethod
     def description():

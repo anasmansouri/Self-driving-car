@@ -3,10 +3,12 @@
 #f.write("18")
 #f.close()
 
-#d = open("/sys/class/gpio/gpio18/direction","w")
-#d.write("out")
-#d.close()
+gpioNumber = 18
 
-v = open("/sys/class/gpio/gpio18/value","w")
-v.write("0")
-v.close()
+d = open("/sys/class/gpio/gpio{}/direction".format(gpioNumber),"w")
+d.write("in")
+d.close()
+
+#v = open("/sys/class/gpio/gpio18/value","w")
+#v.write("0")
+#v.close()
