@@ -1,10 +1,9 @@
-
 class MyPin:
 
-    def __init__(self, GpioNumber ,direction ,value):
+    def __init__(self, GpioNumber):
         self._GpioNumber = GpioNumber
-        self.value = value
-        self.direction = direction
+        self._direction = None
+        self._value = None
 
     # direction
     @property
@@ -41,9 +40,9 @@ class MyPin:
 
     def __repr__(self):
         return "MyPin(GpioNumber : {} ,direction : {} ,value : {})".format(self._GpioNumber,
-                                                                              self.value,
-                                                                              self.direction,
-                                                                              )
+                                                                           self.value,
+                                                                           self.direction,
+                                                                           )
 
     @staticmethod
     def description():
