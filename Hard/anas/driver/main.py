@@ -1,9 +1,10 @@
-from ClassDriverGSEII.Classes import MyPin
 
-p = MyPin(18)
-# p.export()
-print(p.direction)
-p.direction = "out"
-print(p.direction)
+from ClassDriverGSEII import MyPin
 
-p.value = 0
+pin = MyPin.MyPin(18)
+# pin.export()
+print(pin.direction)
+
+pin.direction="out"
+print(pin.direction)
+
