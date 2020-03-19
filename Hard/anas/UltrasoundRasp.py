@@ -6,8 +6,8 @@ import time
 GPIO.setmode(GPIO.BOARD)
  
 #set GPIO Pins
-GPIO_TRIGGER = 12
-GPIO_ECHO = 16
+GPIO_TRIGGER = 14
+GPIO_ECHO = 15
  
 #set GPIO direction (IN / OUT)
 GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
